@@ -1,0 +1,227 @@
+[gd_scene load_steps=9 format=3 uid="uid://bfrw46essuahj"]
+
+[ext_resource type="Script" uid="uid://cwlw1tchu04b8" path="res://GUI/gui.gd" id="1_jn71c"]
+[ext_resource type="Script" uid="uid://daffsn6a65wln" path="res://others/toggleable_reference.gd" id="2_caiki"]
+[ext_resource type="Theme" uid="uid://d0a1phb2mseup" path="res://theme/ui_theme.tres" id="2_dcgop"]
+[ext_resource type="Script" uid="uid://cnf25aut0fpl5" path="res://gui_manager.gd" id="3_qrceq"]
+[ext_resource type="AudioStream" uid="uid://dbm3soxt3nl10" path="res://GUI/assets/buy.wav" id="5_qrceq"]
+[ext_resource type="Theme" uid="uid://dlejmhafete0w" path="res://theme/debug_ui_theme.tres" id="5_w1sex"]
+[ext_resource type="Script" uid="uid://dbkgxdtjm81e1" path="res://GUI/debug_manager.gd" id="6_vkiey"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ujaj"]
+bg_color = Color(0.28584, 0.284849, 0.282146, 1)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_size = 9
+shadow_offset = Vector2(0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_jn71c")
+
+[node name="GUIManager" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_dcgop")
+script = ExtResource("3_qrceq")
+place_every_item = false
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="GUIManager"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+metadata/_edit_lock_ = true
+
+[node name="GeneralHBox" type="HBoxContainer" parent="GUIManager/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="MainSection" type="Panel" parent="GUIManager/MarginContainer/GeneralHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ujaj")
+
+[node name="MarginContainer" type="MarginContainer" parent="GUIManager/MarginContainer/GeneralHBox/MainSection"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="GUIManager/MarginContainer/GeneralHBox/MainSection/MarginContainer"]
+layout_mode = 2
+
+[node name="ToggleableReferenceRect" type="ReferenceRect" parent="GUIManager/MarginContainer/GeneralHBox/MainSection/MarginContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+border_color = Color(0.844529, 0.234383, 0.735249, 1)
+border_width = 3.2
+script = ExtResource("2_caiki")
+metadata/_custom_type_script = ExtResource("2_caiki")
+
+[node name="ContentVBox" type="VBoxContainer" parent="GUIManager/MarginContainer/GeneralHBox/MainSection/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -4
+
+[node name="NameLabel" type="Label" parent="GUIManager/MarginContainer/GeneralHBox/MainSection/MarginContainer/ContentVBox"]
+custom_minimum_size = Vector2(0, 66)
+layout_mode = 2
+text = "- SHOP -"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="GUIManager/MarginContainer/GeneralHBox/MainSection/MarginContainer/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="ScrollMarginContainer" type="MarginContainer" parent="GUIManager/MarginContainer/GeneralHBox/MainSection/MarginContainer/ContentVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="GUIManager/MarginContainer/GeneralHBox/MainSection/MarginContainer/ContentVBox/ScrollMarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+metadata/_edit_lock_ = true
+
+[node name="ItemContentVBox" type="VBoxContainer" parent="GUIManager/MarginContainer/GeneralHBox/MainSection/MarginContainer/ContentVBox/ScrollMarginContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="DebugSection" type="Panel" parent="GUIManager/MarginContainer/GeneralHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_w1sex")
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ujaj")
+script = ExtResource("6_vkiey")
+
+[node name="MarginContainer" type="MarginContainer" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="ToggleableReferenceRect" type="ReferenceRect" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+border_color = Color(0.463212, 0.529506, 0.711683, 1)
+border_width = 3.2
+script = ExtResource("2_caiki")
+metadata/_custom_type_script = ExtResource("2_caiki")
+
+[node name="DebugContentVBox" type="VBoxContainer" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox"]
+layout_mode = 2
+text = "DEBUG"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DebugUtilVBox" type="VBoxContainer" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MoneyEditContainer" type="HBoxContainer" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox/ScrollContainer/DebugUtilVBox"]
+layout_mode = 2
+
+[node name="MoneyLineEdit" type="LineEdit" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox/ScrollContainer/DebugUtilVBox/MoneyEditContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "enter money"
+
+[node name="MoneyAddButton" type="Button" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox/ScrollContainer/DebugUtilVBox/MoneyEditContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "ADD"
+
+[node name="AddToShopContainer" type="HBoxContainer" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox/ScrollContainer/DebugUtilVBox"]
+layout_mode = 2
+
+[node name="ItemOptionButton" type="OptionButton" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox/ScrollContainer/DebugUtilVBox/AddToShopContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 1
+popup/item_0/text = "select item"
+popup/item_0/id = 0
+popup/item_0/separator = true
+
+[node name="ItemAddButton" type="Button" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox/ScrollContainer/DebugUtilVBox/AddToShopContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "ADD"
+
+[node name="HSeparator" type="HSeparator" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox/ScrollContainer/DebugUtilVBox"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ClearShopButton" type="Button" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox/ScrollContainer/DebugUtilVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "!! CLEAR SHOP !!"
+
+[node name="BankruptButton" type="Button" parent="GUIManager/MarginContainer/GeneralHBox/DebugSection/MarginContainer/DebugContentVBox/ScrollContainer/DebugUtilVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "!! GO BANKRUPT !!"
+
+[node name="ToggleableReferenceRect" type="ReferenceRect" parent="GUIManager/MarginContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+border_width = 3.2
+script = ExtResource("2_caiki")
+metadata/_custom_type_script = ExtResource("2_caiki")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="GUIManager"]
+stream = ExtResource("5_qrceq")

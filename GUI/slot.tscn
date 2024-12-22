@@ -1,0 +1,181 @@
+[gd_scene load_steps=11 format=3 uid="uid://devw62wpm7ovb"]
+
+[ext_resource type="Script" uid="uid://daffsn6a65wln" path="res://others/toggleable_reference.gd" id="1_84w75"]
+[ext_resource type="Theme" uid="uid://d0a1phb2mseup" path="res://theme/ui_theme.tres" id="1_ni6nb"]
+[ext_resource type="Script" uid="uid://7yrm7v4wnovf" path="res://GUI/slot.gd" id="2_ni6nb"]
+[ext_resource type="Texture2D" uid="uid://cedjldejjomar" path="res://GUI/assets/buy_button.png" id="3_mp0qi"]
+[ext_resource type="Texture2D" uid="uid://djawrttbmfbmk" path="res://GUI/assets/buying_button.png" id="4_gqdd5"]
+[ext_resource type="Texture2D" uid="uid://dkvdbfm36a5wg" path="res://GUI/assets/hover.png" id="5_doep6"]
+[ext_resource type="Texture2D" uid="uid://xt16tntxthuf" path="res://GUI/assets/bought_button.png" id="6_0kjvp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dcgop"]
+bg_color = Color(0.7337, 0.669095, 0.581617, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_size = 4
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qrceq"]
+bg_color = Color(0.914196, 0.895144, 0.837798, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i66jk"]
+bg_color = Color(0.892539, 0.64968, 0.450791, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.868454, 0.611321, 0.401728, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+corner_detail = 2
+shadow_size = 2
+shadow_offset = Vector2(0, 1.4)
+
+[node name="Slot" type="Control"]
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 3
+anchor_top = 0.1
+anchor_bottom = 0.1
+offset_top = -64.8
+offset_bottom = -64.8
+theme = ExtResource("1_ni6nb")
+script = ExtResource("2_ni6nb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 8
+metadata/_edit_lock_ = true
+
+[node name="PanelBackground" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dcgop")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 9
+theme_override_constants/margin_bottom = 8
+
+[node name="ToggleableReferenceRect" type="ReferenceRect" parent="MarginContainer/MarginContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+border_color = Color(0.160225, 0.598228, 0.658897, 1)
+border_width = 3.2
+script = ExtResource("1_84w75")
+metadata/_custom_type_script = ExtResource("1_84w75")
+
+[node name="SlotContentHBox" type="HBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ItemPanel" type="Panel" parent="MarginContainer/MarginContainer/SlotContentHBox"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qrceq")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/SlotContentHBox/ItemPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 9
+theme_override_constants/margin_bottom = 9
+
+[node name="ItemTextureRect" type="TextureRect" parent="MarginContainer/MarginContainer/SlotContentHBox/ItemPanel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+expand_mode = 1
+
+[node name="ItemTextsVBox" type="VBoxContainer" parent="MarginContainer/MarginContainer/SlotContentHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemName" type="Label" parent="MarginContainer/MarginContainer/SlotContentHBox/ItemTextsVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/MarginContainer/SlotContentHBox/ItemTextsVBox"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_i66jk")
+
+[node name="Lore" type="RichTextLabel" parent="MarginContainer/MarginContainer/SlotContentHBox/ItemTextsVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/MarginContainer/SlotContentHBox"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/SlotContentHBox"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/SlotContentHBox/MarginContainer"]
+layout_mode = 2
+
+[node name="PriceLabel" type="Label" parent="MarginContainer/MarginContainer/SlotContentHBox/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.969662, 0.559093, 1.54018e-06, 1)
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 2
+clip_text = true
+max_lines_visible = 1
+
+[node name="BuyButton" type="TextureButton" parent="MarginContainer/MarginContainer/SlotContentHBox/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+self_modulate = Color(0.894922, 0.894922, 0.894922, 1)
+custom_minimum_size = Vector2(90, 60)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("3_mp0qi")
+texture_pressed = ExtResource("4_gqdd5")
+texture_hover = ExtResource("5_doep6")
+texture_disabled = ExtResource("6_0kjvp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ToggleableReferenceRect" type="ReferenceRect" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+border_width = 3.2
+script = ExtResource("1_84w75")
+metadata/_custom_type_script = ExtResource("1_84w75")
+metadata/_edit_lock_ = true

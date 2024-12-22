@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bmy1cgss8tlh7"]
+
+[ext_resource type="Script" uid="uid://bepshcec1xx2t" path="res://item/item.gd" id="1_bnwmg"]
+[ext_resource type="Texture2D" uid="uid://dboynqvl3fjhr" path="res://item/images/sword.png" id="2_4hm7i"]
+
+[resource]
+script = ExtResource("1_bnwmg")
+item_texture = ExtResource("2_4hm7i")
+item_price = 79.99
+item_name = "* The Sword *"
+item_lore = "A sword, at DISCOUNT!"
+metadata/_custom_type_script = ExtResource("1_bnwmg")

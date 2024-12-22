@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ngcgbf3ersq4"]
+
+[ext_resource type="Script" uid="uid://bepshcec1xx2t" path="res://item/item.gd" id="1_2inj7"]
+[ext_resource type="Texture2D" uid="uid://dik5125a1lkfa" path="res://item/images/sun.png" id="2_oglki"]
+
+[resource]
+script = ExtResource("1_2inj7")
+item_texture = ExtResource("2_oglki")
+item_price = 999.0
+item_name = "THE SUN!"
+item_lore = "THE SUN IS A DEADLY LAZER. He wears sunglasses tho'"
+metadata/_custom_type_script = ExtResource("1_2inj7")

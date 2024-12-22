@@ -1,0 +1,63 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dlejmhafete0w"]
+
+[ext_resource type="FontFile" uid="uid://yp8e6xvjhavb" path="res://theme/font/Edu_SA_Beginner,Outfit/Outfit/static/Outfit-Bold.ttf" id="1_7w163"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7uusv"]
+bg_color = Color(0.631373, 0.635294, 0.639216, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.631373, 0.635294, 0.639216, 1)
+border_blend = true
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27v6b"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 5
+border_color = Color(0.632413, 0.633754, 0.637417, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8aw70"]
+bg_color = Color(0.510946, 0.326015, 0.164209, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 3
+border_width_bottom = 1
+border_color = Color(0.466667, 0.329412, 0.2, 1)
+corner_detail = 1
+shadow_color = Color(0.337312, 0.24178, 0.135527, 1)
+shadow_size = 2
+
+[resource]
+default_font = ExtResource("1_7w163")
+default_font_size = 22
+HSeparator/styles/separator = SubResource("StyleBoxFlat_7uusv")
+Label/colors/font_shadow_color = Color(0.0901961, 0.0901961, 0.0901961, 0.878431)
+Label/constants/outline_size = 4
+Label/constants/shadow_offset_y = 2
+Label/constants/shadow_outline_size = 8
+Panel/styles/panel = SubResource("StyleBoxFlat_27v6b")
+RichTextLabel/colors/default_color = Color(0.989404, 0.702214, 0.425661, 1)
+RichTextLabel/colors/font_outline_color = Color(0.0191885, 0.00234772, 0.0194443, 1)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.443137)
+RichTextLabel/constants/outline_size = 6
+RichTextLabel/constants/shadow_offset_x = 2
+RichTextLabel/constants/shadow_offset_y = 2
+RichTextLabel/constants/shadow_outline_size = 2
+RichTextLabel/font_sizes/normal_font_size = 14
+RichTextLabel/fonts/normal_font = ExtResource("1_7w163")
+VSeparator/styles/separator = SubResource("StyleBoxFlat_8aw70")

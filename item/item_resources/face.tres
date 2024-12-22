@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://6r0tjc0xf3k5"]
+
+[ext_resource type="Script" uid="uid://bepshcec1xx2t" path="res://item/item.gd" id="1_7f35m"]
+[ext_resource type="Texture2D" uid="uid://c1vh5t4xw7u1o" path="res://item/images/smiley_face.png" id="2_w1rot"]
+
+[resource]
+script = ExtResource("1_7f35m")
+item_texture = ExtResource("2_w1rot")
+item_price = 0.0
+item_name = "Smiling Face"
+item_lore = "A smiling face, it's free ^_^"
+metadata/_custom_type_script = ExtResource("1_7f35m")

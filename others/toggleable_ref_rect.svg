@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32.877094mm"
+   height="32.877075mm"
+   viewBox="0 0 32.877094 32.877075"
+   version="1.1"
+   id="svg5"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" /><defs
+     id="defs2"><marker
+       style="overflow:visible"
+       id="Square"
+       refX="0"
+       refY="0"
+       orient="0"
+       inkscape:stockid="Square"
+       markerWidth="3"
+       markerHeight="3"
+       viewBox="0 0 5.6666667 5.6666667"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"><path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M -5,-5 V 5 H 5 V -5 Z"
+         id="Squere" /></marker></defs><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-26.160573,-135.91691)"><path
+       id="rect2651"
+       style="fill:none;stroke:#5bc467;stroke-width:1.999;stroke-linecap:square;stroke-linejoin:round;marker-start:url(#Square);marker-mid:url(#Square);paint-order:markers stroke fill"
+       d="m 29.159073,138.91541 13.506364,13.87227 0.04719,-13.81727 13.326542,-0.055 V 165.7955 H 29.159073 Z"
+       sodipodi:nodetypes="ccccccc" /><rect
+       style="fill:none;fill-opacity:1;stroke:#69e177;stroke-width:1.48289;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect3120"
+       width="11.744063"
+       height="11.744063"
+       x="36.727089"
+       y="146.48341"
+       rx="0.10607971" /></g></svg>
