@@ -6,6 +6,8 @@ I believe that this demo will be useful for you if you are beginner or you still
 **This is the source file for my blog post.
 You can find more details in my blog or in the excalidraw file**
 ### Demo is built with Godot 4.4 dev7 (I used export tooltip buttons)
+- F1 to toggle DEBUG UI
+- ESC to get removed from the existence
 
 
 ## You will learn how to do this:
@@ -26,3 +28,4 @@ UI so it doesn't keep broking in every change
 
 
 ## Also You'll Have Optional Homework:
+
