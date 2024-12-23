@@ -18,6 +18,19 @@ func insert_values(item_name: String)->void:
 	price_label.text = str(Global.items[item_name].item_price)
 
 
+#--Yappin--
+#You could also ignore the binding logic in the gui manager and instead
+#handle the buying logic solely in Slot script but if you wanted to implement
+#different things or there are many stuff that must be handled
+#having gui manager to handle stuff can be more flexible. This was the situation
+#for my plugin. Because plugin needs @tool to work. Giving many scripts @tool
+#and try to make them work can be more hard in that way. In that situation
+#I havent gave any script to the ui elements and handled all the operation in
+#the main script. But anyways, it depends on the situation and the logic of the system
+#there is no need to make everything in the same principle.
+#---
+
+
 func get_lost_lol()->void:
 	self.mouse_entered.disconnect(_mouse_tween)
 	self.mouse_exited.disconnect(_mouse_tween)
@@ -36,7 +49,10 @@ func get_lost_lol()->void:
 func _mouse_tween(val: Vector2, tw_time: float = 0.2)->void:
 	var tween = create_tween()
 	tween.tween_property(self, "scale", val, tw_time)
-	
+
+#happens when enter tree, its the same as connecting nodes in the node section
+#but because they have the same purpose I connected them into the same function
+#instead of creating two separate functions: _on_mouse_entered, _on_mouse_exited
 func _enter_tree() -> void:
 	self.mouse_entered.connect(_mouse_tween.bind(Vector2.ONE * 1.01))
 	self.mouse_exited.connect(_mouse_tween.bind(Vector2.ONE))

@@ -33,6 +33,10 @@ func add_item_slot(item_name: String) -> void:
 	#flexible and easy
 	new_item_slot.set_meta("item_name", item_name)
 	new_item_slot.buy_button.pressed.connect(_item_bought.bind(new_item_slot))
+	
+	#this is valid too
+	#new_item_slot.buy_button.pressed.connect(_les_printos.bind(item_name))
+	
 	new_item_slot.insert_values(item_name)
 	
 func clear_all()->void:
@@ -48,3 +52,8 @@ func _item_bought(item_slot: ItemUISlot)->void:
 	audio_stream_player.play()
 	Global.add_item_to_player(item_slot.get_meta("item_name"))
 	item_slot.get_lost_lol()
+
+
+func _les_printos(val: String)->void:
+	print(val)
+	#but the logic is not implemented

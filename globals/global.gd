@@ -28,7 +28,8 @@ const items = {
 	"stick": preload("res://item/item_resources/stick.tres"),
 	"sun": preload("res://item/item_resources/sun.tres"),
 	"sword": preload("res://item/item_resources/sword.tres"),
-	"tree": preload("res://item/item_resources/tree.tres")
+	"tree": preload("res://item/item_resources/tree.tres"),
+	"godot": preload("res://item/item_resources/godot.tres")
 }
 
 func add_item_to_player(item_name: String)->void:

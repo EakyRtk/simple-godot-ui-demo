@@ -35,7 +35,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_dcgop")
 script = ExtResource("3_qrceq")
-place_every_item = false
 metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="GUIManager"]

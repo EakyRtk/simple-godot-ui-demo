@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://coqw8gv0ekoci"]
+
+[ext_resource type="Script" uid="uid://bepshcec1xx2t" path="res://item/item.gd" id="1_5rcm7"]
+[ext_resource type="Texture2D" uid="uid://c012ypdrmy6fl" path="res://icon.svg" id="1_gd5u0"]
+
+[resource]
+script = ExtResource("1_5rcm7")
+item_texture = ExtResource("1_gd5u0")
+item_price = 4.4
+item_name = "Godot"
+item_lore = "Kept you waiting, huh?"
+metadata/_custom_type_script = ExtResource("1_5rcm7")
