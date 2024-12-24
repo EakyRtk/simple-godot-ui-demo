@@ -8,7 +8,8 @@ You can find more details in my blog or in the excalidraw file**
 ### Demo is built with Godot 4.4 dev7 (I used export tooltip buttons)
 - F1 to toggle DEBUG UI
 - ESC to get removed from the existence
-- Excalidraw presentation is included in this repo. You can import to [Excalidraw](excalidraw.com)
+- Excalidraw presentation is included in this repo. You can import into [Excalidraw](excalidraw.com)
+  It has some other details and memes :D
 - [Blog Guide](https://eakyrtk.com/how-to-make-ui-in-godot-4/)
 
 ## You will learn how to do this:
