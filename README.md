@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/cb4c2fa9-c5ba-46f4-943a-251e60da9a94)# Simple Godot UI Demo
+# Simple Godot UI Demo
 This is my first tutorial demo for Godot beginners, mainly focused on how I deal with UI's in Godot.
 I believe that this demo will be useful for you if you are beginner or you still confused about Godot's UI.
 
