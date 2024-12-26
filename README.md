@@ -11,6 +11,7 @@ You can find more details in my blog or in the excalidraw file**
 - Excalidraw presentation is included in this repo. You can import into [Excalidraw](excalidraw.com)
   It has some other details and memes :D
 - [Blog Guide](https://eakyrtk.com/how-to-make-ui-in-godot-4/)
+- [Homework comments](https://bsky.app/profile/eakyrtk.com/post/3le7g7wxjts23)
 
 ## You will learn how to do this:
 <img src="./output.gif">
